@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhaaga | धागा — One Thread, Many Cultures of India</title>
+  <meta name="description" content="Dhaaga — the red thread that weaves together the history, rituals, heritage, cuisine and craft of every Indian state and union territory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">धागा</p>
+    <h1>One Thread,<br>Many Cultures of India</h1>
+    <p class="lede">The red thread that weaves together the history, rituals, heritage, cuisine and craft of every Indian state and union territory.</p>
+    <svg class="thread" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 20 C 60 0, 120 40, 180 20 S 300 0, 360 20 S 480 40, 540 20 S 590 10, 600 20" />
+    </svg>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Find a state or union territory">
+      <label class="search">
+        <span class="sr-only">Search</span>
+        <input id="search" type="search" placeholder="Search a place, dish, craft or festival…" autocomplete="off">
+      </label>
+      <div id="filters" class="chips" role="group" aria-label="Filter by region"></div>
+      <p id="count" class="count" aria-live="polite"></p>
+    </section>
+
+    <section id="grid" class="grid" aria-label="States and union territories"></section>
+    <p id="empty" class="empty" hidden>Nothing matches that search. Try another word.</p>
+  </main>
+
+  <dialog id="details" aria-labelledby="d-title">
+    <form method="dialog"><button class="close" aria-label="Close">&times;</button></form>
+    <p id="d-meta" class="meta"></p>
+    <h2 id="d-title"></h2>
+    <dl id="d-list"></dl>
+  </dialog>
+
+  <footer>
+    <p>Dhaaga is a starter guide, so entries are short and meant to grow. Know something we missed? Open an issue or pull request on GitHub.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
